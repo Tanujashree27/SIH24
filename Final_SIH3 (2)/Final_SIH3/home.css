@@ -1,0 +1,417 @@
+/* Global Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000; /* Changed to black */
+    color: white;
+}
+
+.logo img {
+    height: 70px;
+    width: 80px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.left-nav {
+    display: flex;
+    gap: 15px;
+    padding: 3%;
+}
+
+
+.right-nav {
+    display: flex;
+    gap: 15px;
+}
+
+/* Adjusted the search bar to appear in navigation */
+.search-bar-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar-nav input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Slideshow Section */
+.slideshow {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 400px;
+}
+
+.slideshow-container {
+    display: flex;
+    width: 300%;
+}
+
+.slide {
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Cold Storage Recommendation Section */
+.cold-storage-recommendation {
+    padding: 50px 30px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.cold-storage-recommendation h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.cold-storage-recommendation-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cold-storage-recommendation-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.cold-storage-recommendation-item:hover {
+    transform: scale(1.05);
+}
+
+.cold-storage-recommendation-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cold-storage-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.cold-storage-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.cold-storage-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.cold-storage-content .cta-button {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block; /* Ensures the button size adjusts to the text */
+    text-align: center; /* Centers the text inside the button */
+}
+
+.cold-storage-content .cta-button:hover {
+    background-color: #333; /* Slightly lighter black for hover effect */
+}
+
+
+
+/* Product Recommendation Section */
+.product-recommendation {
+    padding: 50px 30px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.product-recommendation h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.product-recommendation-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-recommendation-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.product-recommendation-item:hover {
+    transform: scale(1.05);
+}
+
+.product-recommendation-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.product-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-content .cta-button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.product-content .cta-button:hover {
+    background-color: #333;
+}
+
+
+
+
+/* Services Section */
+.services {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.services-container {
+    max-width: 1200px; /* Adjust based on desired max width */
+    margin: 0 auto;
+    padding: 0 20px; /* Optional: Add padding for better spacing */
+}
+
+.service-box {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-end;
+    padding: 50px;
+    margin-bottom: 20px; /* Add spacing between service boxes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Add background color for better contrast */
+    border-radius: 8px; /* Optional: Add border radius for rounded corners */
+}
+
+.service-box img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+
+.service-content {
+    flex: 1;
+    padding-right: 300px;
+}
+
+.service-content2 {
+    flex: 1;
+    /* padding-right: 300px; */
+}
+
+.service-content h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.service-content2 h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.service-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.service-content2 p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.service-buy{
+    text-align: right;
+   
+}
+
+.cta-button {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #333; /* Slightly lighter black for hover effect */
+}
+
+
+/* Layout Adjustments */
+.service-rent, .service-buy, .service-sell {
+    flex-direction: row; /* Adjust as needed based on content alignment */
+}
+
+
+
+
+/* News and Blog Section */
+.news-blog {
+    padding: 50px 30px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.news-blog h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.news-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.news-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%; /* Each news item will take up 30% of the container */
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.news-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    color: #0056b3;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+
+
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul li a {
+    color: #fff;
+}

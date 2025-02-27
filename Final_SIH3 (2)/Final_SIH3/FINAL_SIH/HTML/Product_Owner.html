@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertise Your Product</title>
+    <link rel="stylesheet" href="product-owner.css">
+    <link rel="stylesheet" href="po.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Cold Storage Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="#">Rent</a></li>
+                <li><a href="#">Sell</a></li>
+                <li><a href="#"><img src="location-icon.png" alt="Location"></a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <ul>
+                <li><a href="listing.html">List</a></li>
+                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="login.html">Sign In/Register</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Product Owner Advertising Section -->
+    <section class="advertising-section">
+        <h1>Advertise Your Products</h1>
+        <p>Get your products featured on our platform and reach a wider audience. Choose your advertising options below.</p>
+
+        <form action="payment.html" method="GET" class="advertising-form">
+            <div class="form-group">
+                <label for="product-name">Product Name</label>
+                <input type="text" id="product-name" name="product_name" placeholder="Enter your product name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="product-description">Product Description</label>
+                <textarea id="product-description" name="product_description" rows="4" placeholder="Describe your product" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="product-image">Product Image</label>
+                <input type="file" id="product-image" name="product_image" accept="image/*" required>
+            </div>
+
+            <div class="form-group">
+                <label>Advertising Options</label>
+                <div class="options">
+                    <label><input type="checkbox" name="advertise_top_search" value="yes"> Feature at Top of Search Results</label>
+                    <label><input type="checkbox" name="advertise_home_slideshow" value="yes"> Display in Homepage Slideshow</label>
+                </div>
+            </div>
+
+            <button type="submit" class="button">Advertisement</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Mail Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

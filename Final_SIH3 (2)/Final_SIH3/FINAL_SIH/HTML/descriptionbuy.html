@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit/Vegetable Description</title>
+    <link rel="stylesheet" href="description.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* Header Section */
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo img {
+            width: 150px;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Fruit/Vegetable Description Section */
+        .product-section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-section img, .product-section video {
+            width: 80%;
+            max-width: 700px;
+            border-radius: 10px;
+        }
+
+        .description-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .description-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .details {
+            margin-top: 20px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .details h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .details ul {
+            list-style-type: square;
+            margin: 0;
+            padding: 0;
+        }
+
+        .details ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact-button {
+            margin-top: 30px;
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        .contact-button a {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .contact-button a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Section */
+    footer {
+        background-color: black;
+        padding: 20px;
+        color: white;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-links ul {
+        list-style-type: none;
+        display: flex;
+        gap: 20px; /* Adds space between the items */
+    }
+
+    .footer-links ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .footer-links ul li a:hover {
+        text-decoration: underline; /* Optional: Adds an underline on hover */
+    }
+
+
+        footer ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer ul li {
+            display: inline;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-section img, .product-section video {
+                width: 100%;
+            }
+
+            footer ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .small-image {
+        width: 100%; /* Adjust this to control the size */
+        max-width: 1000px; /* You can change this value to make the image smaller */
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="rent.html">Rent</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="list.html">List</a></li>
+                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="login.html">Sign In/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Fruit/Vegetable Section -->
+    <section class="product-section">
+        <!-- Replace with image or video -->
+        <img src="frozen kiwis kept i_LE_auto_x2.jpg" alt="Fruit/Vegetable Image" class="small-image">
+        <!-- Or if you want a video:
+        <video controls>
+            <source src="fruit-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        -->
+
+        <div class="description-title">Fruit/Vegetable Description</div>
+
+        <div class="description-content">
+            <p>This is a high-quality fruit/vegetable that is sourced from the best farms. The product is known for its freshness, vibrant color, and rich taste. We guarantee the best quality for all the fruits and vegetables on our platform.</p>
+        </div>
+
+        <div class="details">
+            <h2>Product Details & Origin</h2>
+            <ul>
+                <li>Product Type: Fresh Fruit/Vegetable</li>
+                <li>Origin: [Place of Origin]</li>
+                <li>Farm Type: Organic</li>
+                <li>Available Quantity: [Specify Quantity]</li>
+                <li>Storage Temperature: Best at 2°C - 8°C</li>
+                <li>Estimated Delivery: 3-5 business days</li>
+            </ul>
+        </div>
+
+        <div class="contact-button">
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Mail Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

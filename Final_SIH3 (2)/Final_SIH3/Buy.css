@@ -1,0 +1,165 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+}
+
+.logo img {
+    width: 120px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.left-nav {
+    display: flex;
+    gap: 15px;
+    padding: 3%;
+}
+
+.right-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.search-bar-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar-nav input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Slideshow Section */
+.slideshow {
+    position: relative;
+    max-width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slideshow .slide {
+    width: 100%;
+}
+
+.slideshow .slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Recommendations Section */
+.recommendations {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.recommendations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* New Flexbox for Horizontal Alignment */
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    gap: 20px; /* Adds space between items */
+}
+
+.product-box {
+    flex: 1;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+    max-width: 30%; /* Ensures width is consistent across boxes */
+}
+
+.product-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 20px;
+    text-align: left;
+}
+
+.product-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product-details p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.cta-button {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #444;
+}
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul li a {
+    color: #fff;
+}

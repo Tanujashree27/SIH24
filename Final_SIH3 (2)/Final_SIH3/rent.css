@@ -1,0 +1,233 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000; /* Changed to black */
+    color: white;
+}
+
+.logo img {
+    width: 120px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.left-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.right-nav {
+    display: flex;
+    gap: 15px;
+}
+
+/* Adjusted the search bar to appear in navigation */
+.search-bar-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar-nav input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Slideshow Section */
+.slideshow {
+    position: relative;
+    width: 100%;
+}
+
+.slideshow-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    flex: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.search-bar {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Rent Page Main Section */
+.rent-page {
+    padding: 20px;
+}
+
+.content-container {
+    display: flex;
+    margin: 20px auto;
+}
+
+/* Filters Section Styling */
+.filters {
+    width: 25%;
+    padding: 20px;
+    background-color: #c0c0c0;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.filters h2 {
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.filters label {
+    display: block;
+    margin: 30px 5px 20px;
+}
+
+.filters select,
+.filters input[type="range"],
+.filters button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.filters input[type="range"] {
+    -webkit-appearance: none;
+    background: #ddd;
+}
+
+.filters input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #000000;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.filters input[type="range"]::-moz-range-thumb {
+    background: #000000;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.filters button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.filters button:hover {
+    background-color: #000000;
+}
+
+/* Storage Listings Section */
+.storage-listings {
+    width: 75%;
+    padding: 20px;
+}
+
+.storage-box {
+    display: flex;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.storage-box img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.storage-details h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.storage-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.storage-details button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.storage-details button:hover {
+    background-color: #6d7680;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: white;
+}

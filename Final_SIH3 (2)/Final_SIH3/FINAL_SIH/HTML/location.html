@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Storage Locator</title>
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <h1>Find Nearby Cold Storage</h1>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([20.2961, 85.8245], 13); // Default location
+
+        // Load and display OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Sample Data for Cold Storages
+        const coldStorages = [
+            {
+                id: 1,
+                name: "Bhubaneswar Cold Storage Pvt. Ltd.",
+                location: { lat: 20.2961, lon: 85.8245 },
+                capacity: 500, // in cubic meters
+                temperatureRange: { min: -10, max: 5 }, // in Celsius
+                pricePerDay: 100
+            },
+            {
+                id: 2,
+                name: "Cuttack Cold Storage",
+                location: { lat: 20.4625, lon: 85.8828 },
+                capacity: 1000,
+                temperatureRange: { min: 2, max: 8 },
+                pricePerDay: 150
+            },
+            {
+                id: 3,
+                name: "Rukmini Cold Storage",
+                location: { lat: 20.3075, lon: 85.8180 },
+                capacity: 1500,
+                temperatureRange: { min: -2, max: 12 },
+                pricePerDay: 1000
+            },
+            {
+                id: 4,
+                name: "Navi Storage",
+                location: { lat: 20.4075, lon: 85.7180 },
+                capacity: 950,
+                temperatureRange: { min: 32, max: 42 },
+                pricePerDay: 1000
+            },
+            {id: 5,
+                name: " new ware house",
+                location: { lat: 20.2966, lon: 85.8235},
+                capacity: 1200,
+                temperatureRange: { min: 2, max: 22 },
+                pricePerDay: 800
+            },
+            {id: 6,
+                name: " share warehouse",
+                location: { lat: 20.2976, lon: 85.8535},
+                capacity:1234,
+                temperatureRange: { min: -1, max: 12 },
+                pricePerDay: 1200
+            },
+            {id: 7,
+                name: " satyawadi warehouse",
+                location: { lat: 20.2969, lon: 85.8217},
+                capacity:1255,
+                temperatureRange: { min: -1, max: 12 },
+                pricePerDay: 1100
+            },
+            {id: 8,
+                name: " sitara warehouse",
+                location: { lat:20.2371, lon: 85.7455},
+                capacity:1255,
+                temperatureRange: { min: -1, max: 12 },
+                pricePerDay: 1100
+            },
+            {id: 9,
+                name: "sahara cold storage",
+                location: { lat:20.2380, lon: 85.7490},
+                capacity:1255,
+                temperatureRange: { min: -5, max: 11 },
+                pricePerDay: 2100
+            },
+            {id: 10,
+                name: "sahara cold storage",
+                location: { lat:20.3180, lon: 85.7390},
+                capacity:1255,
+                temperatureRange: { min: -5, max: 11 },
+                pricePerDay: 2100
+            },
+
+            // Add more cold storages here
+        ];
+
+        // Define a custom icon for the user's location
+        const userIcon = L.divIcon({
+            className: 'user-icon',
+            html: '<div style="background-color: red; color: white; border-radius: 20%; padding: 5px; text-align: center; font-size: 10px;">You are here</div>',
+            iconSize: [100, 40]
+        });
+
+        // Function to display cold storages on the map
+        function displayColdStorages(coldStorages) {
+            coldStorages.forEach(storage => {
+                const { lat, lon } = storage.location;
+                const marker = L.marker([lat, lon]).addTo(map);
+
+                // Create a popup with cold storage info
+                marker.bindPopup(`
+                    <b>${storage.name}</b><br>
+                    Capacity: ${storage.capacity} m³<br>
+                    Temperature: ${storage.temperatureRange.min}°C to ${storage.temperatureRange.max}°C<br>
+                    Price: $${storage.pricePerDay}/day
+                `);
+            });
+        }
+
+        // Show user's location
+        function showPosition(position) {
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            map.setView([lat, lng], 13); // Center map on user's location
+
+            // Add a marker for the user's location with the custom icon
+            L.marker([lat, lng], { icon: userIcon }).addTo(map);
+
+            // Display cold storages on the map
+            displayColdStorages(coldStorages);
+        }
+
+        // Handle geolocation errors
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("User denied the request for Geolocation.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Location information is unavailable.");
+                    break;
+                case error.TIMEOUT:
+                    alert("The request to get user location timed out.");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert("An unknown error occurred.");
+                    break;
+            }
+        }
+
+        // Get user's location if possible
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            alert("Geolocation is not supported by this browser.");
+            // Optionally, you could initialize with a default location
+            displayColdStorages(coldStorages);
+        }
+    </script>
+</body>
+</html>

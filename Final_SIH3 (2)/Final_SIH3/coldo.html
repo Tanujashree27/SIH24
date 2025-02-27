@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertise Your Cold Storage</title>
+    <link rel="stylesheet" href="cold-storage-owner.css">
+    <link rel="stylesheet" href="coldo.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Cold Storage Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="#">Rent</a></li>
+                <li><a href="#">Sell</a></li>
+                <li><a href="#"><img src="location-icon.png" alt="Location"></a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <ul>
+                <li><a href="listing.html">List</a></li>
+                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="login.html">Sign In/Register</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Cold Storage Owner Advertising Section -->
+    <section class="advertising-section">
+        <h1>Advertise Your Cold Storage</h1>
+        <p>Get your cold storage space noticed by potential customers. Fill out the details below to advertise.</p>
+
+        <form action="/submit-advertisement" method="POST" class="advertising-form">
+            <div class="form-group">
+                <label for="storage-name">Cold Storage Name</label>
+                <input type="text" id="storage-name" name="storage_name" placeholder="Enter your storage name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="storage-description">Cold Storage Description</label>
+                <textarea id="storage-description" name="storage_description" rows="4" placeholder="Describe your cold storage space" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="storage-image">Storage Image</label>
+                <input type="file" id="storage-image" name="storage_image" accept="image/*" required>
+            </div>
+
+            <div class="form-group">
+                <label>Advertising Options</label>
+                <div class="options">
+                    <label><input type="checkbox" name="advertise_top_search" value="yes"> Feature at Top of Search

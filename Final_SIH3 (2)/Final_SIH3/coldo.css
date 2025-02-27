@@ -1,0 +1,139 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    width: 120px;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+.header-right ul {
+    display: flex;
+    gap: 15px;
+}
+
+/* Advertising Section */
+.advertising-section {
+    padding: 40px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.advertising-section h1 {
+    font-size: 2.5rem;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+.advertising-section p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+}
+
+.advertising-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.advertising-form label {
+    display: block;
+    font-size: 1rem;
+    color: #34495e;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.advertising-form input[type="text"],
+.advertising-form textarea,
+.advertising-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.advertising-form textarea {
+    resize: vertical;
+}
+
+.advertising-form .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.advertising-form .options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button {
+    background-color: #27ae60;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #2ecc71;
+}
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer ul li a {
+    color: #fff;
+}

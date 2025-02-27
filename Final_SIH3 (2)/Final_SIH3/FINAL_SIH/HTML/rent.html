@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Cold Storage</title>
+    <link rel="stylesheet" href="rent.css"> <!-- Link to the same CSS file for consistency -->
+    <script defer src="rent.js"></script> <!-- Link to the same JS file if needed -->
+</head>
+<body>
+    <!-- Header Section (Same as Home Page) -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Cold Storage Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Buy.Html">Buy</a></li>
+                <li><a href="#">Rent</a></li>
+                <li><a href="#">Sell</a></li>
+                <li><a href="#"><img src="location-icon.png" alt="Location"></a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <ul>
+                <li><a href="#">List</a></li>
+                <li><a href="#">Advertise</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Sign In/Register</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Slideshow Section (Same as Home Page) -->
+    <section class="slideshow">
+        <div class="slideshow-container">
+            <div class="slide">
+                <img src="coldstorage1.jpg" alt="Cold Storage 1">
+            </div>
+            <div class="slide">
+                <img src="coldstorage2.jpg" alt="Cold Storage 2">
+            </div>
+            <div class="slide">
+                <img src="coldstorage3.jpg" alt="Cold Storage 3">
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Cold Storage...">
+        </div>
+    </section>
+
+    <!-- Rent Page Main Section -->
+    <section class="rent-page">
+        <div class="content-container">
+            <!-- Filters Section (Left Side) -->
+            <aside class="filters">
+                <h2>Filters</h2>
+                <!-- Rating Slider -->
+                <label for="rating">Rating:</label>
+                <input type="range" id="rating" min="1" max="5" step="1" value="3" oninput="document.getElementById('rating_value').textContent=this.value">
+                <span id="rating_value">3</span> Stars
+                
+                <!-- Select Cold Storage Type Dropdown -->
+                <label for="storageType">Select Type of Cold Storage:</label>
+                <select id="storageType">
+                    <option value="Refrigerated Cold Storage">Refrigerated Cold Storage</option>
+                    <option value="Controlled Atmosphere (CA) Cold Storage">Controlled Atmosphere (CA) Cold Storage</option>
+                    <option value="Frozen Storage">Frozen Storage</option>
+                    <option value="Evaporative Cooling Storage">Evaporative Cooling Storage</option>
+                    <option value="Multi-Commodity Cold Storage">Multi-Commodity Cold Storage</option>
+                    <option value="Bulk Cold Storage">Bulk Cold Storage</option>
+                    <option value="Ripening Cold Storage">Ripening Cold Storage</option>
+                    <option value="Solar-Powered Cold Storage">Solar-Powered Cold Storage</option>
+                    <option value="Modified Atmosphere Cold Storage">Modified Atmosphere Cold Storage</option>
+                    <option value="Portable Cold Storage">Portable Cold Storage</option>
+                </select>
+
+                <!-- Temperature Slider -->
+                <label for="temperature">Temperature:</label>
+                <input type="range" id="temperature" min="-25" max="25" step="1" value="0" oninput="document.getElementById('temperature_value').textContent=this.value">
+                <span id="temperature_value">0</span> °C
+
+                <!-- Best For Dropdown -->
+                <label for="bestFor">Best For:</label>
+                <select id="bestFor">
+                    <option value="fruits">Fruits</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="crops">Crops</option>
+                </select>
+
+                <!-- Capacity Slider -->
+                <label for="capacity">Capacity:</label>
+                <input type="range" id="capacity" min="0.5" max="100" step="0.5" value="50" oninput="document.getElementById('capacity_value').textContent=this.value">
+                <span id="capacity_value">50</span> Tons
+
+                <!-- Discount Dropdown -->
+                <label for="discount">Discount:</label>
+                <select id="discount">
+                    <option value="50% or more">50% or more</option>
+                    <option value="40% or more">40% or more</option>
+                    <option value="30% or more">30% or more</option>
+                    <option value="20% or more">20% or more</option>
+                    <option value="10% or more">10% or more</option>
+                </select>
+
+                <!-- Distance Slider -->
+                <label for="distance">Distance:</label>
+                <input type="range" id="distance" min="0.5" max="50" step="0.5" value="10" oninput="document.getElementById('distance_value').textContent=this.value">
+                <span id="distance_value">10</span> Km
+
+                <!-- Apply and Save Changes Button -->
+                <button id="applyFilters" onclick="applyFilters()">Apply Filters</button>
+                <button id="saveFilters" onclick="saveFilters()">Save Changes</button>
+            </aside>
+
+            <!-- Cold Storage Rental Listings Section (Right Side) -->
+            <section class="storage-listings">
+                <div id="storage-items">
+                    <!-- Example of Cold Storage Box -->
+                    <div class="storage-box">
+                        <img src="coldstorage-example.jpg" alt="Cold Storage">
+                        <div class="storage-details">
+                            <h3>Cold Storage Name</h3>
+                            <p>Capacity: 50 Tons</p>
+                            <p>Rating: ⭐⭐⭐⭐⭐</p>
+                            <p>Discount: 20%</p>
+                            <p>Rent Price: $200/month</p>
+                            <p>Description: Ideal for fruits and vegetables.</p>
+                            <button onclick="window.location.href='contact.php'">Contact</button>
+                            <button onclick="window.location.href='details.php?id=1'">View Details</button>
+                        </div>
+                    </div>
+                    <!-- More cold storage boxes will be added dynamically here -->
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer Section (Same as Home Page) -->
+    <footer>
+        <div class="footer-container">
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Mail Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script> <!-- Your JavaScript file to handle filters and interactions -->
+</body>
+</html>

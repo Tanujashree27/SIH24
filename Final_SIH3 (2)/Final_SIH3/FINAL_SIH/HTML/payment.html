@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Gateway</title>
+  <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>CV Raman College of Engineering</h1>
+      <div class="amount">Amount: ₹87500.00</div>
+    </header>
+
+    <nav class="payment-methods">
+      <button id="upi-btn" class="tab active" onclick="showTab('upi')">UPI</button>
+      <button id="card-btn" class="tab" onclick="showTab('card')">Credit/Debit Card</button>
+      <button id="netbanking-btn" class="tab" onclick="showTab('netbanking')">Net Banking</button>
+    </nav>
+
+    <!-- UPI Form -->
+    <div id="upi" class="tab-content">
+      <h2>Pay with UPI</h2>
+      <label for="upi-id">Enter UPI ID:</label>
+      <input type="text" id="upi-id" name="upi-id" placeholder="example@bank" required>
+      <button class="pay-now">Pay Now</button>
+    </div>
+
+    <!-- Credit/Debit Card Form -->
+    <div id="card" class="tab-content" style="display:none;">
+      <h2>Pay using Credit/Debit Card</h2>
+      <label>Select Card Type:</label>
+      <select id="card-type" onchange="showCardForm()">
+        <option value="">--Select a Card Type--</option>
+        <option value="Visa">Visa</option>
+        <option value="Mastercard">Mastercard</option>
+        <option value="RuPay">RuPay</option>
+      </select>
+      
+      <!-- Visa Card Form -->
+      <div id="visa-form" class="card-form" style="display:none;">
+        <h3>Visa Card Information</h3>
+        <label for="visa-name">Cardholder Name:</label>
+        <input type="text" id="visa-name" name="visa-name" required>
+        <label for="visa-number">Card Number:</label>
+        <input type="number" id="visa-number" name="visa-number" required>
+        <label for="visa-exp">Expiration Date:</label>
+        <input type="date" id="visa-exp" name="visa-exp" required>
+        <label for="visa-cvv">CVV:</label>
+        <input type="password" id="visa-cvv" name="visa-cvv" required>
+      </div>
+      
+      <!-- Mastercard Form -->
+      <div id="mastercard-form" class="card-form" style="display:none;">
+        <h3>Mastercard Information</h3>
+        <label for="mastercard-name">Cardholder Name:</label>
+        <input type="text" id="mastercard-name" name="mastercard-name" required>
+        <label for="mastercard-number">Card Number:</label>
+        <input type="number" id="mastercard-number" name="mastercard-number" required>
+        <label for="mastercard-exp">Expiration Date:</label>
+        <input type="date" id="mastercard-exp" name="mastercard-exp" required>
+        <label for="mastercard-cvv">CVV:</label>
+        <input type="password" id="mastercard-cvv" name="mastercard-cvv" required>
+      </div>
+      
+      <!-- RuPay Form -->
+      <div id="rupay-form" class="card-form" style="display:none;">
+        <h3>RuPay Card Information</h3>
+        <label for="rupay-name">Cardholder Name:</label>
+        <input type="text" id="rupay-name" name="rupay-name" required>
+        <label for="rupay-number">Card Number:</label>
+        <input type="number" id="rupay-number" name="rupay-number" required>
+        <label for="rupay-exp">Expiration Date:</label>
+        <input type="date" id="rupay-exp" name="rupay-exp" required>
+        <label for="rupay-cvv">CVV:</label>
+        <input type="password" id="rupay-cvv" name="rupay-cvv" required>
+      </div>
+
+      <button class="pay-now">Pay Now</button>
+    </div>
+
+    <div id="netbanking" class="tab-content" style="display:none;">
+      <h2>Pay via Net Banking</h2>
+      <label>Select Bank:</label>
+      <select>
+        <option>SBI</option>
+        <option>HDFC</option>
+        <option>ICICI</option>
+        <!-- Add other bank options -->
+      </select>
+      <button class="pay-now">Pay Now</button>
+    </div>
+
+    <footer>
+      <p>No convenience fee for UPI/Debit card transactions.</p>
+    </footer>
+  </div>
+
+  <script src="payment.js"></script>
+</body>
+</html>

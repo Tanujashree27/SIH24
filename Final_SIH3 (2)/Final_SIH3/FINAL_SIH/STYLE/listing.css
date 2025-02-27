@@ -1,0 +1,132 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    width: 120px;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+.header-right ul {
+    display: flex;
+    gap: 15px;
+}
+
+/* Listing Section */
+.listing-section {
+    padding: 40px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.listing-section h1 {
+    font-size: 2.5rem;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+.listing-section p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Form Styles */
+.listing-form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Button Styles */
+.button {
+    background-color: #27ae60;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #2ecc71;
+}
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer ul li a {
+    color: #fff;
+}

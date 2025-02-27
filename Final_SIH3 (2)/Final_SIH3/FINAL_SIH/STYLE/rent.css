@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.header-right ul li a {
+    font-size: 14px;
+    color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    font-size: 16px;
+    color: #333;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Slideshow Section */
+.slideshow {
+    position: relative;
+    width: 100%;
+}
+
+.slideshow-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    flex: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.search-bar {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Rent Page Main Section */
+.rent-page {
+    padding: 20px;
+}
+
+.content-container {
+    display: flex;
+    margin: 20px auto;
+}
+
+.filters {
+    width: 25%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ddd;
+}
+
+.filters h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.filters label {
+    display: block;
+    margin: 15px 0 5px;
+}
+
+.filters select,
+.filters input[type="range"],
+.filters button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.filters input[type="range"] {
+    -webkit-appearance: none;
+    background: #ddd;
+}
+
+.filters input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #4CAF50;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.filters input[type="range"]::-moz-range-thumb {
+    background: #4CAF50;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.filters button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.filters button:hover {
+    background-color: #45a049;
+}
+
+/* Storage Listings */
+.storage-listings {
+    width: 75%;
+    padding: 20px;
+}
+
+.storage-box {
+    display: flex;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.storage-box img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.storage-details h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.storage-details p {
+    margin: 5px 0;
+}
+
+.storage-details button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.storage-details button:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-container ul li a {
+    font-size: 14px;
+    color: #333;
+}

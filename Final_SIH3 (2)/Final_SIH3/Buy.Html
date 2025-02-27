@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Storage - Buy Products</title>
+    <link rel="stylesheet" href="Buy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" height="100px" width="50px" alt="Cold Storage Logo"></a>
+        </div>
+        <nav>
+            <ul class="left-nav">
+                <li><a href="Buy.html">Buy</a></li>
+                <li><a href="#">Sell</a></li>
+                <li><a href="#">Rent</a></li>
+                <li><a href="#"><i class="fa-solid fa-location-dot"></i></a></li>
+            </ul>
+            <div class="search-bar-nav">
+                <input type="text" placeholder="Search...">
+            </div>
+            <ul class="right-nav">
+                <li><a href="#">List</a></li>
+                <li><a href="#">Advertise</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Sign In/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slideshow Section -->
+    <section class="slideshow">
+        <div class="slide">
+            <img src="Buy_homepage1.jpg" alt="Cold Storage Image 1">
+        </div>
+        <div class="slide">
+            <img src="slide2.jpg" alt="Cold Storage Image 2">
+        </div>
+        <div class="slide">
+            <img src="slide3.jpg" alt="Cold Storage Image 3">
+        </div>
+        
+    </section>
+
+    <!-- Cold Storage Product Recommendations -->
+    <section class="recommendations">
+        <h2>Recommended Cold Storages</h2>
+        <div class="product-container">
+            <div class="product-box">
+                <img src="Grapes.jpg" alt="Mango Image">
+                <div class="product-details">
+                    <h3>City A Cold Storage</h3>
+                    <p>Fruit: Grapes</p>
+                    <p>Location: 1234 Street, City A</p>
+                    <p>Price: $20 per kg</p>
+                    <button class="cta-button" onclick="redirectToSeller()">Contact Seller</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <img src="Pineapple.jpg" alt="Apple Image">
+                <div class="product-details">
+                    <h3>City B Cold Storage</h3>
+                    <p>Fruit: Apple</p>
+                    <p>Location: 5678 Street, City B</p>
+                    <p>Price: $15 per kg</p>
+                    <button class="cta-button" onclick="redirectToSeller()">Contact Seller</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <img src="Kiwis.jpg" alt="Orange Image">
+                <div class="product-details">
+                    <h3>City C Cold Storage</h3>
+                    <p>Fruit: Orange</p>
+                    <p>Location: 9101 Street, City C</p>
+                    <p>Price: $12 per kg</p>
+                    <button class="cta-button" onclick="redirectToSeller()">Contact Seller</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer Section -->
+     <footer>
+        <div class="footer-container">
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Mail Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="buy.js"></script>
+</body>
+</html>

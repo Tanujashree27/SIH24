@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Storage Article</title>
+    <link rel="stylesheet" href="article.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Header Section */
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo img {
+            width: 150px;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Article Section */
+        .article-section {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .article-section h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .article-section .article-meta {
+            font-size: 14px;
+            color: gray;
+            margin-bottom: 20px;
+        }
+
+        .article-section img {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .article-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Like and Comment Section */
+        .like-comment-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .like-button, .comment-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .like-button:hover, .comment-button:hover {
+            background-color: #0056b3;
+        }
+
+        .like-count {
+            margin-left: 10px;
+            font-size: 16px;
+        }
+
+        /* Comment Section */
+        .comment-box {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .comment-box textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .comment-box button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comment-box button:hover {
+            background-color: #218838;
+        }
+
+        /* Footer Section */
+    footer {
+        background-color: black;
+        padding: 20px;
+        color: white;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-links ul {
+        list-style-type: none;
+        display: flex;
+        gap: 20px; /* Adds space between the items */
+    }
+
+    .footer-links ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .footer-links ul li a:hover {
+        text-decoration: underline; /* Optional: Adds an underline on hover */
+    }
+
+
+        footer ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer ul li {
+            display: inline;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .like-comment-section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        .small-image {
+        width: 100%; /* Adjust this to control the size */
+        max-width: 1000px; /* You can change this value to make the image smaller */
+        aspect-ratio: 16 / 4;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="rent.html">Rent</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="list.html">List</a></li>
+                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="login.html">Sign In/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Article Section -->
+    <section class="article-section">
+        <h1>Cold Storage: Enhancing Fruit Quality and Storage Facilities</h1>
+        <div class="article-meta">Published on September 6, 2024 | By Admin</div>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate architecto facilis nulla in alias expedita unde velit adipisci ducimus a amet ipsam at blanditiis eos, sit quisquam ut incidunt saepe? Aut cumque asperiores cum necessitatibus sit? Hic et quia, officiis, animi sint ad placeat exercitationem facere omnis nostrum nam unde? Illum odit mollitia nam quam harum sunt officiis tenetur, optio fugiat. Debitis rerum voluptatibus vero animi error laboriosam rem distinctio veniam ea cum! Et repellat itaque, modi harum earum atque minima officiis dolor quae odio similique eveniet laborum inventore voluptatum, quo laboriosam libero voluptas asperiores enim quasi optio sed, reprehenderit minus. Error natus excepturi laboriosam voluptas labore, repudiandae sequi deserunt, enim sapiente dolorem perferendis ea nulla amet suscipit? Eius quaerat excepturi totam, officia, libero repellendus eum vitae ullam voluptatum nobis facere incidunt enim delectus officiis blanditiis, harum autem accusantium sequi debitis aperiam fugit ipsa odit atque quasi? Deleniti modi quidem consequuntur. Quo deserunt nemo facilis similique quas ex maiores eum autem, illo aliquid voluptate ducimus nisi quidem quam dolor, velit praesentium veniam molestias voluptatibus in expedita doloribus quis ullam distinctio? Incidunt minus sapiente blanditiis earum impedit pariatur totam natus similique voluptates quasi tempora eveniet recusandae vel, magnam veniam eligendi cupiditate.
+        </p>
+
+
+        <img src="cold storage images (1)_LE_auto_x2_colored.jpg" alt="Cold Storage Facilities" class="small-image">
+
+        <p>
+            Cold storage plays a vital role in preserving the quality of fruits and vegetables. It ensures that products stay fresh for a longer period of time by maintaining an optimal temperature and humidity level. The facilities are equipped with modern technology that helps control the environment inside the storage chambers.
+        </p>
+
+        <img src="frozen tomatoes in c_LE_auto_x2.jpg" alt="Fruits Quality" class="small-image">
+
+        <p>
+            These storage systems help in reducing spoilage and wastage of perishable goods, thus increasing the overall shelf life of fruits. High-quality cold storage facilities ensure that fruits retain their taste, texture, and nutritional value for weeks or even months after being harvested.
+        </p>
+
+        <p>
+            With cold storage, farmers and sellers can offer a continuous supply of fruits, ensuring their customers receive only the freshest products, no matter the season. The facilities often include temperature control, humidity management, and monitoring systems to ensure optimal storage conditions.
+        </p>
+
+        <div class="like-comment-section">
+            <button class="like-button">👍 Like</button><span class="like-count">0 Likes</span>
+            <button class="comment-button">💬 Comment</button>
+        </div>
+
+        <!-- Comment Box -->
+        <div class="comment-box">
+            <textarea rows="4" placeholder="Write a comment..."></textarea>
+            <button type="submit">Submit Comment</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    
+    <footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Mail Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+
+    <!-- JavaScript for Like and Comment Interaction -->
+    <script>
+        const likeButton = document.querySelector('.like-button');
+        const likeCount = document.querySelector('.like-count');
+        const commentButton = document.querySelector('.comment-button');
+        const commentBox = document.querySelector('.comment-box');
+
+        let likes = 0;
+
+        // Like button functionality
+        likeButton.addEventListener('click', () => {
+            likes++;
+            likeCount.textContent = `${likes} Likes`;
+        });
+
+        // Show/hide comment box
+        commentButton.addEventListener('click', () => {
+            commentBox.style.display = commentBox.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Products</title>
+    <link rel="stylesheet" href="sell.css">
+    <script defer src="sell.css"></script>
+</head>
+<body>
+
+    <!-- Header Section (Same as Home Page) -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png"  height="90px" width="25px" alt="Cold Storage Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="rent.html">Rent</a></li>
+                <li><a href="sell.html" class="active">Sell</a></li>
+                <li><a href="#"><i class="fa-solid fa-location-dot"></i></a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <ul>
+                <li><a href="listing.html">List</a></li>
+                <li><a href="aads.html">Advertise</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="login.html">Sign In/Register</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Slideshow Section -->
+    <section class="slideshow">
+        <div class="slideshow-container">
+            <div class="slide">
+                <img src="Pears.jpg" alt="Cold Storage 1">
+            </div>
+            <div class="slide">
+                <img src="coldstorage2.jpg" alt="Cold Storage 2">
+            </div>
+            <div class="slide">
+                <img src="coldstorage3.jpg" alt="Cold Storage 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seller Form Section -->
+    <section class="seller-form">
+        <div class="content-container">
+            <h2>Sell Your Products</h2>
+            <form action="submit_product.php" method="POST">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" name="productName" required>
+
+                <label for="productType">Product Type:</label>
+                <select id="productType" name="productType" required>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Crops">Crops</option>
+                </select>
+
+                <label for="quantity">Quantity (in Tons):</label>
+                <input type="number" id="quantity" name="quantity" step="0.1" required>
+
+                <label for="price">Price per Ton ($):</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+
+                <label for="sellerName">Your Name:</label>
+                <input type="text" id="sellerName" name="sellerName" required>
+
+                <label for="contactEmail">Contact Email:</label>
+                <input type="email" id="contactEmail" name="contactEmail" required>
+
+                <label for="contactPhone">Contact Phone:</label>
+                <input type="tel" id="contactPhone" name="contactPhone">
+
+                <button type="submit">Submit Product</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section (Same as Home Page) -->
+    <footer>
+        <div class="footer-container">
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Mail Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

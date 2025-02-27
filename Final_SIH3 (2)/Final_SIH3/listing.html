@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Cold Storage - Cold Storage Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="listing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+     <!-- Header Section -->
+     <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" height="100px" width="50px" alt="Cold Storage Logo"></a>
+        </div>
+        <nav>
+            <ul class="left-nav">
+                <li><a href="Buy.html">Buy</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="#">Rent</a></li>
+                <li><a href="#"><i class="fa-solid fa-location-dot"></i></a></li>
+            </ul>
+            <ul class="right-nav">
+                <li><a href="#">List</a></li>
+                <li><a href="#">Advertise</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Sign In/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Listing Section -->
+    <section class="listing-section">
+        <h1>List Your Cold Storage</h1>
+        <p>Provide the details of your cold storage facility and make it available for farmers and buyers to rent.</p>
+
+        <form action="submit-listing.php" method="POST" class="listing-form">
+            <!-- Cold Storage Name -->
+            <div class="form-group">
+                <label for="name">Cold Storage Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <!-- Location -->
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+
+            <!-- Capacity -->
+            <div class="form-group">
+                <label for="capacity">Capacity (in Tons):</label>
+                <input type="number" id="capacity" name="capacity" required>
+            </div>
+
+            <!-- Availability -->
+            <div class="form-group">
+                <label for="availability">Available from:</label>
+                <input type="date" id="availability" name="availability" required>
+            </div>
+
+            <!-- Rent Price -->
+            <div class="form-group">
+                <label for="rent">Rent Price (per week in ₹):</label>
+                <input type="number" id="rent" name="rent" required>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="5" placeholder="Provide any additional information about the cold storage..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="button">List Cold Storage</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Mail Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
